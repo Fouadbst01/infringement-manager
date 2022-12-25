@@ -76,3 +76,7 @@ détectés par des radars automatiques. Le système se compose de trois micro-se
 
 ![image](https://user-images.githubusercontent.com/70094556/209483814-b59ed194-17cf-4008-a063-e99aa6b10445.png)
 
+### 16. Test du radar query :
+
+![image](https://user-images.githubusercontent.com/70094556/209483994-0de3e8fc-18d7-4ab5-90db-42e60cfc1338.png)
+
