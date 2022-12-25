@@ -3,12 +3,11 @@ package com.example.registrationservicecommand.controllers;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.commandhandling.gateway.CommandGateway;
-import org.sid.command.CreateVehicleCommand;
-import org.sid.dtos.VehicleRequestDTO;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.sid.coreapi.command.CreateVehicleCommand;
+import org.sid.coreapi.command.UpdateVehicleOwnerCommand;
+import org.sid.coreapi.dtos.OwnerRequestDTO;
+import org.sid.coreapi.dtos.VehicleRequestDTO;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
@@ -29,4 +28,15 @@ public class VehicleCommandController {
             )
         );
     }
+
+    @PutMapping("/vehicles/updateOwner/{idVehicle}")
+    public CompletableFuture<String> UpdateVehicleOwner(@PathVariable String idVehicle,@RequestBody OwnerRequestDTO ownerRequestDTO){
+        return commandGateway.send(
+            new UpdateVehicleOwnerCommand(
+                idVehicle,
+                ownerRequestDTO
+            )
+        );
+    }
+
 }

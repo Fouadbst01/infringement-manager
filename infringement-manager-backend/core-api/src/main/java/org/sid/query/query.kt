@@ -4,3 +4,7 @@ class GetAllRadarQuery();
 data class GetRadarQuery(
     val radarId:String
 );
+
+data class getVehicleRegistrationQuery(
+    val matriculation:String
+);

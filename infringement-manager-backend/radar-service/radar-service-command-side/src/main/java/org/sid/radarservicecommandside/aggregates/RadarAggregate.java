@@ -41,13 +41,13 @@ public class RadarAggregate {
     }
 
     @CommandHandler
-    public void on(UpdateRadarCommand updateRadarCommand){
+    public void handel(UpdateRadarCommand updateRadarCommand){
         log.info("UpdateRadarCommand received");
 
         AggregateLifecycle.apply(new UpdateRadarEvent(updateRadarCommand.getId(), updateRadarCommand.getRadarRequestDTO()));
     }
     @CommandHandler
-    public void on(DeleteRadarCommand deleteRadarCommand){
+    public void handel(DeleteRadarCommand deleteRadarCommand){
         log.info("DeleteRadarCommand received");
 
         AggregateLifecycle.apply(new DeleteRadarEvent(deleteRadarCommand.getId()));

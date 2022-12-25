@@ -1,5 +1,6 @@
 package com.example.registrationservicecommand;
 
+import com.thoughtworks.xstream.XStream;
 import org.axonframework.commandhandling.CommandBus;
 import org.axonframework.commandhandling.SimpleCommandBus;
 import org.springframework.boot.SpringApplication;
@@ -16,5 +17,12 @@ public class RegistrationServiceCommandApplication {
     @Bean
     CommandBus commandBus(){
         return SimpleCommandBus.builder().build();
+    }
+
+    @Bean
+    public XStream xStream() {
+        XStream xStream = new XStream();
+        xStream.allowTypesByWildcard(new String[] { "org.sid.**" });
+        return xStream;
     }
 }

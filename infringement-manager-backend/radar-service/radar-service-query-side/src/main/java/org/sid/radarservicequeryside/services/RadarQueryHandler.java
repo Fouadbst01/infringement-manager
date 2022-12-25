@@ -17,12 +17,12 @@ import java.util.List;
 public class RadarQueryHandler {
     private RadarRepository radarRepository;
     @QueryHandler
-    public List<Radar> on(GetAllRadarQuery query){
+    public List<Radar> handler(GetAllRadarQuery query){
         return radarRepository.findAll();
     }
 
     @QueryHandler
-    public RadarResponseDTO on(GetRadarQuery query) throws RadarNotFoundException {
+    public RadarResponseDTO handler(GetRadarQuery query) throws RadarNotFoundException {
         Radar radar = radarRepository.findById(query.getRadarId()).orElseThrow(()->new RadarNotFoundException(String.format("radar %s not found", query.getRadarId())));
         RadarResponseDTO radarResponseDTO = new RadarResponseDTO();
         radarResponseDTO.setRadarId(radar.getId());

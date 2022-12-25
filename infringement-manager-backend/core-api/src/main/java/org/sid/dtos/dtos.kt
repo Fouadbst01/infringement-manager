@@ -17,19 +17,36 @@ data class RadarResponseDTO(
 
 
 data class VehicleRequestDTO(
-    val registrationNum:String,
-    val brand:String,
-    val model:String,
-    val horsepower:Int,
-    val ownerId:String,
-    val ownerName:String,
-    val ownerBirthDate: Date
+    val registrationNum:String="",
+    val brand:String="",
+    val model:String="",
+    val horsepower:Int=0,
+    val ownerCIN:String="",
+    val ownerName:String="",
+    val ownerBirthDate: Date= Date()
+);
+
+data class VehicleRegistrationResponseDTO(
+    var registrationNum:String="",
+    var brand:String="",
+    var model:String="",
+    var horsepower:Int=0,
+    var ownerCIN:String="",
+    var ownerName:String="",
+    var ownerBirthDate: Date= Date()
+);
+
+
+data class OwnerRequestDTO(
+    val ownerCIN:String="",
+    val ownerName:String="",
+    val ownerBirthDate: Date=Date()
 );
 
 data class OverSpeedDetectionRequestDTO(
-    val registrationNum:String,
-    val radarId:String,
-    val speed:Float,
+    val registrationNum:String="",
+    val radarId:String="",
+    val speed:Float=0f,
 )
 
 
