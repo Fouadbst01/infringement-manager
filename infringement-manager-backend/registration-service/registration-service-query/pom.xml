@@ -7,7 +7,7 @@
         <artifactId>registration-service</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.example</groupId>
+
     <artifactId>registration-service-query</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>registration-service-query</name>
@@ -15,9 +15,6 @@
     <properties>
         <java.version>17</java.version>
     </properties>
-    <dependencies>
-
-    </dependencies>
 
     <build>
         <plugins>

@@ -1,3 +1,6 @@
 package org.sid.coreapi.query
 
-class GetAllRadarQuery()
+class GetAllRadarQuery();
+data class GetRadarQuery(
+    val radarId:String
+);

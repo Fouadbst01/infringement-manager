@@ -8,7 +8,9 @@ import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.axonframework.modelling.command.AggregateLifecycle;
 import org.sid.coreapi.command.CreateRadarCommand;
 import org.sid.coreapi.command.DeleteRadarCommand;
+import org.sid.coreapi.command.OverSpeedDetectionCommand;
 import org.sid.coreapi.command.UpdateRadarCommand;
+import org.sid.coreapi.dtos.OverSpeedDetectionRequestDTO;
 import org.sid.coreapi.dtos.RadarRequestDTO;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
@@ -33,14 +35,14 @@ public class RadarCommandController {
         return commandGateway.send(new UpdateRadarCommand(radarId,radarRequestDTO));
     }
 
-    @DeleteMapping("/radar/update/{radarId}")
+    @DeleteMapping("/radar/delete/{radarId}")
     public CompletableFuture<String> deleteRadar(@PathVariable String radarId){
         return commandGateway.send(new DeleteRadarCommand(radarId));
     }
 
-    /*@DeleteMapping("/radar/overSpeedMember/{radarId}")
-    public CompletableFuture<String> deleteRadar(@PathVariable String radarId){
-        return commandGateway.send(new OverSpeedDetectionCommand(radarId));
-    }*/
+    @PutMapping("/radar/overSpeed")
+    public CompletableFuture<String> deleteRadar(@PathVariable OverSpeedDetectionRequestDTO overSpeedDetctoinRequestDTO){
+        return commandGateway.send(new OverSpeedDetectionCommand(overSpeedDetctoinRequestDTO.getRegistrationNum(),overSpeedDetctoinRequestDTO));
+    }
 
 }

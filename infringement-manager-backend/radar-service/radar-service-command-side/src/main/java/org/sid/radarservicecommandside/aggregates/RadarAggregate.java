@@ -46,7 +46,6 @@ public class RadarAggregate {
 
         AggregateLifecycle.apply(new UpdateRadarEvent(updateRadarCommand.getId(), updateRadarCommand.getRadarRequestDTO()));
     }
-
     @CommandHandler
     public void on(DeleteRadarCommand deleteRadarCommand){
         log.info("DeleteRadarCommand received");
@@ -70,5 +69,9 @@ public class RadarAggregate {
         this.longitude=event.getPayload().getLongitude();
     }
 
+    @EventSourcingHandler
+    public void on(DeleteRadarEvent deleteRadarEvent){
+        AggregateLifecycle.markDeleted();
+    }
 
 }
