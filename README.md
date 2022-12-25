@@ -48,7 +48,31 @@ détectés par des radars automatiques. Le système se compose de trois micro-se
 
 ![image](https://user-images.githubusercontent.com/70094556/209481768-ca4ecb4a-b1b7-4907-bf84-eaeb50eeb089.png)
 
-### 10. Les détails du micro service dans AXON SERVER UI:
+### 10. Lancement de Axon Server avec Docker :
 
+![image](https://user-images.githubusercontent.com/70094556/209482096-df1fb644-69a4-4e2c-91bc-859ee55e8d3d.png)
 
+### 11. Les détails du micro service dans AXON SERVER UI:
+
+![image](https://user-images.githubusercontent.com/70094556/209482031-aaf1b4ab-d6cf-4a4b-9c9c-30e38f1a17ce.png)
+
+### 12. Les Eureka Cloud Dashboard:
+
+![image](https://user-images.githubusercontent.com/70094556/209482139-228b0c08-3bcd-4d88-8950-3e7e5f2eebf8.png)
+
+### 13. La documentation swagger du radar-service-query-side:
+
+![image](https://user-images.githubusercontent.com/70094556/209482212-a53156be-d137-4646-b80f-ce2d612e37d1.png)
+
+### 14. La documentation swagger du radar-service-command-side:
+
+![image](https://user-images.githubusercontent.com/70094556/209483725-ab90498b-0e24-4bb9-9602-694e0368cd26.png)
+
+### 15. La documentation swagger du registration-service-command:
+
+![image](https://user-images.githubusercontent.com/70094556/209483796-ab74456d-b48f-4ce4-9650-2838634ebe89.png)
+
+### 16. La documentation swagger du registration-service-query:
+
+![image](https://user-images.githubusercontent.com/70094556/209483814-b59ed194-17cf-4008-a063-e99aa6b10445.png)
 
